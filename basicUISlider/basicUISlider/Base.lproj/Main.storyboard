@@ -18,9 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oq0-5s-seO">
-                                <rect key="frame" x="34" y="269" width="252" height="31"/>
-                            </slider>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKb-cD-QIz">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <color key="barTintColor" red="1" green="0.7297785725" blue="0.65693177619999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,6 +30,9 @@
                                     <navigationItem title="UISlider" id="1id-Cc-QjD"/>
                                 </items>
                             </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oq0-5s-seO">
+                                <rect key="frame" x="34" y="269" width="252" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.7297785725" blue="0.65693177619999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
