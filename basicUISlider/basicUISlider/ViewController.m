@@ -19,35 +19,53 @@
 @implementation ViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.05
-                                                  target:self
-                                                selector:@selector(onTimer)
-                                                userInfo:nil
-                                                 repeats:YES];
 
-
-//   slider.transform = CGAffineTransformMakeRotation(M_PI);
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                              target:self
+                                            selector:@selector(sliderUp)
+                                            userInfo:nil
+                                             repeats:YES];
 }
 
-
-- (void)onTimer {
-    for (int i=1; i<3; i++) {
+- (void)sliderUp {
     slider.value += 0.01;
-    if (slider.value == 1 && (i==1 || i==2)) {
-        slider.transform = CGAffineTransformMakeRotation(M_PI*i);
-        slider.value = 0;
-//        [_timer invalidate];
-    }}
-    slider.tintColor =[UIColor redColor];
-    slider.thumbTintColor = [UIColor brownColor];
-//    slider.minimumValueImage = [UIImage imageNamed:@"icon111"];
-//    slider.minimumTrackTintColor = [UIColor whiteColor];
-//    slider.maximumTrackTintColor = [UIColor greenColor];
-    
-    
-    
+    if (slider.value == 1) {
+        [_timer invalidate];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                                  target:self
+                                                selector:@selector(sliderDown)
+                                                userInfo:nil
+                                                 repeats:YES];
+    }
+}
+
+- (void)sliderDown {
+    slider.value -= 0.01;
+    if (slider.value == 0) {
+        [_timer invalidate];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                                  target:self
+                                                selector:@selector(sliderUp)
+                                                userInfo:nil
+                                                 repeats:YES];
+    }
+}
+
+- (IBAction)sliderChangeValue:(UISlider *)sender {
+
     
 }
 
 
 @end
+
+
+
+
+
+
+
+
+
+

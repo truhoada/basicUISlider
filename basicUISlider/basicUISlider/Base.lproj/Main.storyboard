@@ -32,6 +32,9 @@
                             </navigationBar>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oq0-5s-seO">
                                 <rect key="frame" x="34" y="269" width="252" height="31"/>
+                                <connections>
+                                    <action selector="sliderChangeValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Cp4-bE-uNH"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.7297785725" blue="0.65693177619999998" alpha="1" colorSpace="calibratedRGB"/>
